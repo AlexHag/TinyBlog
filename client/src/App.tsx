@@ -7,6 +7,7 @@ import PostCard from './Components/PostCard';
 import Home from './Pages/Home';
 import Error from './Components/Error';
 import OnePost from './Pages/OnePost';
+import OneUserProfile from './Pages/OneUserProfile';
 
 export interface JsonPost {
   id: number,
@@ -38,6 +39,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/post/:id" element={<OnePost />} />
+          <Route path="/u/:username" element={<OneUserProfile />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>

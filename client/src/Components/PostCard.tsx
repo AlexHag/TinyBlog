@@ -30,7 +30,7 @@ function PostCard({PostData}: {PostData: JsonPost} ): JSX.Element {
 
       <div className="post-right">
         <h1>{PostData.title}</h1>
-        <h2>@{PostData.username}</h2>
+        <h2 onClick={(e) => {e.stopPropagation(); navigate(`/u/${PostData.username}`)}}>@{PostData.username}</h2>
         <p>{PostData.body}</p>
 
         <div className="post-hashtag">

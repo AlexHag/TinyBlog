@@ -28,6 +28,10 @@ app.get('/posts/:id/comments', (req, res) => {
     res.send(theCommentData.find(p => p['postId'] == req.params.id)['comments']);
 });
 
+app.get('/u/:username', (req, res) => {
+    res.send(thePostData.filter(p => p['username'] == req.params.username));
+});
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 });
