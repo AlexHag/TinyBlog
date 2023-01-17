@@ -39,11 +39,11 @@ function Home(): JSX.Element {
     <div className="home">
       <h1>Tiny Blog</h1>
       <div className="post-tags-options">
-        <button onClick={() => ChangeTag('classic')} className={currentTag == 'classic' ? 'active' : ''}>Classic</button>
-        <button onClick={() => ChangeTag('mystery')} className={currentTag == 'mystery' ? 'active' : ''}>Mystery</button>
-        <button onClick={() => ChangeTag('french')} className={currentTag == 'french' ? 'active' : ''}>French</button>
-        <button onClick={() => ChangeTag('love')} className={currentTag == 'love' ? 'active' : ''}>Love</button>
-        <button onClick={() => ChangeTag('fiction')} className={currentTag == 'fiction' ? 'active' : ''}>Fiction</button>
+        <button onClick={() => ChangeTag('classic')} className={currentTag == 'classic' ? 'active-button' : 'not-active-button'}>Classic</button>
+        <button onClick={() => ChangeTag('mystery')} className={currentTag == 'mystery' ? 'active-button' : 'not-active-button'}>Mystery</button>
+        <button onClick={() => ChangeTag('french')} className={currentTag == 'french' ? 'active-button' : 'not-active-button'}>French</button>
+        <button onClick={() => ChangeTag('love')} className={currentTag == 'love' ? 'active-button' : 'not-active-button'}>Love</button>
+        <button onClick={() => ChangeTag('fiction')} className={currentTag == 'fiction' ? 'active-button' : 'not-active-button'}>Fiction</button>
       </div>
       {displayPost.map(p => <PostCard key={p.id} PostData={p}/>)}
       <button onClick={DoStuff}>Do Stuff</button>
