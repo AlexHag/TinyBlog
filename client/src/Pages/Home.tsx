@@ -8,7 +8,7 @@ import { JsonPost } from "../App";
 function Home(): JSX.Element {
   const [allPost, setAllPost] = useState<JsonPost[]>([]);
   const [displayPost, setDisplayPost] = useState<JsonPost[]>([]);
-  const [currentTag, setCurrentTag] = useState("classic");
+  const [currentTag, setCurrentTag] = useState(localStorage.getItem("currentTag") ?? "classic");
 
   useEffect(() => {
     fetch('http://localhost:8080/posts')
@@ -25,6 +25,7 @@ function Home(): JSX.Element {
   }
 
   const ChangeTag = (theTag: string) => {
+    localStorage.setItem("currentTag", theTag);
     setCurrentTag(theTag)
     setDisplayPost(allPost.filter(k => k.tags.includes(theTag)));
   }

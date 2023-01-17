@@ -45,8 +45,21 @@
 
 .post-actions {
   margin-bottom: 2%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 10fr 1fr 1fr;
+  align-items: center;
+}
+.comment-icon {
+  max-width: 60%;
+}
+.thubs-up-icon-icon {
+  max-width: 60%;
+}
+.amout-of-action {
+  text-align: center;
+  font-weight: 500px;
+  font: 500px;
+  font-weight: 500px;
 }
 
 .back-button {

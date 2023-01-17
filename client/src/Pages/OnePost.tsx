@@ -11,6 +11,7 @@ function OnePost(): JSX.Element {
   const [thePost, setThePost] = useState<JsonPost>();
   const [theComments, setTheComments] = useState<JsonComment[]>();
 
+  // This could be made into one fetch...
   useEffect(() => {
     fetch(`http://localhost:8080/posts/${id}`)
     .then(p => p.json())
