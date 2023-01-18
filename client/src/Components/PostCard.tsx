@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import CommentIcon from '../img/CommentIcon.svg';
 import ThumbsUpIcon from '../img/ThumbsUpIcon.svg';
 import '../css/Post.css';
-
 import { JsonPost } from "../App";
 
 //interface JsonPost {
@@ -17,7 +16,6 @@ import { JsonPost } from "../App";
 //   username: string,
 //   profile_picture: string
 // };
-
 
 function PostCard({PostData}: {PostData: JsonPost} ): JSX.Element {
   const navigate = useNavigate();
@@ -38,10 +36,10 @@ function PostCard({PostData}: {PostData: JsonPost} ): JSX.Element {
         </div>
 
         <div className="post-actions">
-          <p className="amout-of-action">{PostData.reactions}</p>
+          <p className="amout-of-action">{PostData.number_of_comments}</p>
           <img src={CommentIcon} className="comment-icon"/>
           <div className="empty-item"></div>
-          <p className="amout-of-action">{PostData.number_of_comments}</p>
+          <p className="amout-of-action">{PostData.reactions}</p>
           <img src={ThumbsUpIcon} className="thubs-up-icon-icon"/>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { JsonComment } from "../App";
 import '../css/Post.css';
+
 // id: number,
 // body: string,
 // postId: number;
@@ -19,7 +20,6 @@ function CommentCard({CommentData}: {CommentData: JsonComment}): JSX.Element {
         <div className="empty-item"></div>
         <p className="one-comment-content-body-p">{CommentData.body}</p>
       </div>
-      
     </div>
   );
 };
