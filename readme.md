@@ -20,3 +20,7 @@ A blog based on data stolen from https://dummyjson.com/posts that shows differen
 ![One post](/client/src/img/onePost.PNG)
 - ## A profile
 ![A profile](/client/src/img/profile.PNG)
+
+
+## Review
+- This blog has been reviewed by highly recommended reviewers
